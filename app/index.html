@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Reddit</title>
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body>
+
+      <h1 class="navbar-brand" style="text-align:center;">Reddit-Clone Style</h1>
+    </div>
+    <!-- /.navbar-header -->
+    <ul class="nav navbar-top-links navbar-right">
+        <li style="top: 10px; padding-right: 15px;"><div id="user-pic" style="height: 28px; width: 28px; background-size: 28px; border-radius: 24px;"></div></li>
+        <li style="padding-top: 7px; padding-bottom: 7px;"><div id="user-name" class="mdl-color-text--black"></div></li>
+        <li style="padding-top: 7px; padding-bottom: 7px;"><button id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+          Sign-out
+        </button></li>
+        <li style="padding-top: 7px; padding-bottom: 7px;"><button id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+          <i class="material-icons">account_circle</i>Sign-in with Google
+        </button></li>
+        
+        <li style="padding-top: 7px; padding-bottom: 7px;"><button id="sign-github" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+          <i class="material-icons">account_circle</i>Sign-in with github
+        </button></li>
+    </ul>
+
+    <div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav; height: 28px; width: 28px;" >
+        <ul class="nav" id="nice-menu">
+          <li class="sidebar-brand">
+            <div class="ttdiv" style="text-align: center">
+              <b>Topics</b>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav" id="side-menu">
+          <li id="favorite" class="topic-botton">
+            <a href="#"><span class="ttspan-fill">1. What is your favorite cartoon</span></a>
+          </li>
+          <li id="topic2" class="topic-botton">
+            <a href="#"><span class="ttspan-fill">2. What is your favorite sports?</span></a>
+          </li>
+          <li id="topic3" class="topic-botton">
+            <a href="#"><span class="ttspan-fill">3. MEAN,LAMP AND Serverless which do you prefer?</span></a>
+          </li>
+          <li id="topic4" class="topic-botton">
+            <a href="#"><span class="ttspan-fill">4. How long do you spend in GYM per week?</span></a>
+          </li>
+          <li id="topic5" class="topic-botton">
+            <a href="#"><span class="ttspan-fill">5. Who is your favorite star?</span></a>
+          </li>
+          <li id="topic5" class="topic-botton">
+            <a href="#"><span class="ttspan-fill">5. Who is your favorite star?</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="page-wrapper" style="background-color: #f8f8f8">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 id="page-header" class="page-header">Topics select</h1>
+      </div>
+      
+    </div>
+    <!-- /.row -->
+    <!-- Responsive table starts here -->
+  <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+  <div class="table-responsive-vertical shadow-z-1">
+  <!-- Table starts here -->
+  
+  <table id="message-box" class="table table-hover table-striped">
+      <tbody></tbody>
+    </table>
+  
+  <div id="input-message" style="display: none;">
+          <form id="message-form">
+            <div id="input-holder" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input id="input-box" class="mdl-textfield__input" type="text" id="message" placeholder="message">
+              <!--<label class="mdl-textfield__label" for="message">Message...</label>-->
+            </div>
+            <button id="submit" disabled class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Send
+            </button>
+          </form>
+  </div> <!-- input-message -->
+</div> <!-- wrapper -->
+<div id="snackbar"></div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDKCEyPcLuuJil99IsAmIqQ5GIqOYF9anw",
+    authDomain: "rebbit4-5dac2.firebaseapp.com",
+    databaseURL: "https://rebbit4-5dac2.firebaseio.com",
+    projectId: "rebbit4-5dac2",
+    storageBucket: "gs://rebbit4-5dac2.appspot.com",
+    messagingSenderId: "490063513642"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="js/auth.js"></script>
+  <script src="js/index.js?v=1"></script>
+</body>
+</html>
